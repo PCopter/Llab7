@@ -1,7 +1,29 @@
 #include<iostream>
 
 using namespace std;
-
+int adiff(int a,int b){
+  int c;
+  while(a >=360){
+    a=a-360;
+  }
+  while(b >=360){
+    b=b-360;
+  }
+  while(a <=-360){
+    a=a+360;
+  }
+  while(b <=-360){
+    b=b+360;
+  }
+  c=a-b;
+  if(c<0){
+    c=c*(-1);
+  }
+  if(c>180){
+    c=360-c;
+  }
+  return c;
+}
 
 int main(){
   cout << adiff(180,270);
